@@ -1,9 +1,8 @@
 # schema-validator
 
 [![Tests](https://github.com/philiprehberger/kt-schema-validator/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/kt-schema-validator/actions/workflows/publish.yml)
-[![Maven Central](https://img.shields.io/maven-central/v/com.philiprehberger/schema-validator)](https://central.sonatype.com/artifact/com.philiprehberger/schema-validator)
-[![License](https://img.shields.io/github/license/philiprehberger/kt-schema-validator)](LICENSE)
-[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
+[![Maven Central](https://img.shields.io/maven-central/v/com.philiprehberger/schema-validator.svg)](https://central.sonatype.com/artifact/com.philiprehberger/schema-validator)
+[![Last updated](https://img.shields.io/github/last-commit/philiprehberger/kt-schema-validator)](https://github.com/philiprehberger/kt-schema-validator/commits/main)
 
 Declarative data validation with composable rules and structured errors.
 
@@ -65,6 +64,24 @@ when (val result = userSchema.validate(user)) {
 ./gradlew build
 ```
 
+## Support
+
+If you find this project useful:
+
+⭐ [Star the repo](https://github.com/philiprehberger/kt-schema-validator)
+
+🐛 [Report issues](https://github.com/philiprehberger/kt-schema-validator/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+
+💡 [Suggest features](https://github.com/philiprehberger/kt-schema-validator/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+
+❤️ [Sponsor development](https://github.com/sponsors/philiprehberger)
+
+🌐 [All Open Source Projects](https://philiprehberger.com/open-source-packages)
+
+💻 [GitHub Profile](https://github.com/philiprehberger)
+
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/philiprehberger)
+
 ## License
 
-MIT
+[MIT](LICENSE)
