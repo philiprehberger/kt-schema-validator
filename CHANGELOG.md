@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0 (2026-03-31)
+
+- Add `crossField()` for validating relationships between fields
+- Add `conditionalField()` for rules that only apply when a condition is met
+- Add `Schema.compose()` for merging two schemas into one
+- Add custom error message overloads for `minLength()` and `maxLength()`
+
 ## 0.1.4 (2026-03-31)
 
 - Standardize README to 3-badge format with emoji Support section
