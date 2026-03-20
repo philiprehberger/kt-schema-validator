@@ -2,12 +2,9 @@
 
 [![CI](https://github.com/philiprehberger/kt-schema-validator/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/kt-schema-validator/actions/workflows/publish.yml)
 [![Maven Central](https://img.shields.io/maven-central/v/com.philiprehberger/schema-validator)](https://central.sonatype.com/artifact/com.philiprehberger/schema-validator)
+[![License](https://img.shields.io/github/license/philiprehberger/kt-schema-validator)](LICENSE)
 
 Declarative data validation with composable rules and structured errors.
-
-## Requirements
-
-- Kotlin 1.9+ / Java 17+
 
 ## Installation
 
@@ -15,7 +12,7 @@ Declarative data validation with composable rules and structured errors.
 
 ```kotlin
 dependencies {
-    implementation("com.philiprehberger:schema-validator:0.1.0")
+    implementation("com.philiprehberger:schema-validator:0.1.2")
 }
 ```
 
@@ -25,7 +22,7 @@ dependencies {
 <dependency>
     <groupId>com.philiprehberger</groupId>
     <artifactId>schema-validator</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.2</version>
 </dependency>
 ```
 
