@@ -1,6 +1,6 @@
 # schema-validator
 
-[![CI](https://github.com/philiprehberger/kt-schema-validator/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/kt-schema-validator/actions/workflows/publish.yml)
+[![Tests](https://github.com/philiprehberger/kt-schema-validator/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/kt-schema-validator/actions/workflows/publish.yml)
 [![Maven Central](https://img.shields.io/maven-central/v/com.philiprehberger/schema-validator)](https://central.sonatype.com/artifact/com.philiprehberger/schema-validator)
 [![License](https://img.shields.io/github/license/philiprehberger/kt-schema-validator)](LICENSE)
 
@@ -11,9 +11,7 @@ Declarative data validation with composable rules and structured errors.
 ### Gradle (Kotlin DSL)
 
 ```kotlin
-dependencies {
-    implementation("com.philiprehberger:schema-validator:0.1.2")
-}
+implementation("com.philiprehberger:schema-validator:0.1.3")
 ```
 
 ### Maven
@@ -22,7 +20,7 @@ dependencies {
 <dependency>
     <groupId>com.philiprehberger</groupId>
     <artifactId>schema-validator</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
 </dependency>
 ```
 
