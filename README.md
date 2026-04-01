@@ -11,7 +11,7 @@ Declarative data validation with composable rules and structured errors.
 ### Gradle (Kotlin DSL)
 
 ```kotlin
-implementation("com.philiprehberger:schema-validator:0.1.3")
+implementation("com.philiprehberger:schema-validator:0.2.0")
 ```
 
 ### Maven
@@ -20,7 +20,7 @@ implementation("com.philiprehberger:schema-validator:0.1.3")
 <dependency>
     <groupId>com.philiprehberger</groupId>
     <artifactId>schema-validator</artifactId>
-    <version>0.1.3</version>
+    <version>0.2.0</version>
 </dependency>
 ```
 
@@ -43,6 +43,40 @@ when (val result = userSchema.validate(user)) {
 }
 ```
 
+### Cross-Field Validation
+
+```kotlin
+data class DateRange(val start: Int, val end: Int)
+
+val dateSchema = schema<DateRange> {
+    field("start", DateRange::start) { range(1..365) }
+    field("end", DateRange::end) { range(1..365) }
+    crossField("start must be before end") { it.start < it.end }
+}
+```
+
+### Conditional Rules
+
+```kotlin
+data class ContactForm(val type: String, val email: String)
+
+val formSchema = schema<ContactForm> {
+    field("type", ContactForm::type) { required() }
+    conditionalField("email", ContactForm::email, { it.type == "email" }) {
+        required()
+        email()
+    }
+}
+```
+
+### Schema Composition
+
+```kotlin
+val baseSchema = schema<User> { field("name", User::name) { required() } }
+val extendedSchema = schema<User> { field("email", User::email) { email() } }
+val fullSchema = baseSchema.compose(extendedSchema)
+```
+
 ## API
 
 | Function / Class | Description |
@@ -55,6 +89,11 @@ when (val result = userSchema.validate(user)) {
 | `email()` | Basic email format check |
 | `matches(regex)` | Regex pattern match |
 | `custom(message) { predicate }` | Custom validation rule |
+| `crossField(message) { }` | Cross-field validation |
+| `conditionalField(name, getter, condition) { }` | Conditional field validation |
+| `Schema.compose(other)` | Combine two schemas |
+| `minLength(n, message)` | Min length with custom error |
+| `maxLength(n, message)` | Max length with custom error |
 | `ValidationResult.Valid` / `Invalid` | Sealed result type |
 
 ## Development
